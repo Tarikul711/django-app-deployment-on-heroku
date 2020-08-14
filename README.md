@@ -46,3 +46,27 @@ You will get the `APPLICATION_NAME` in the project settings.py file. Inside sett
 ```python
     web: gunicorn djangoheroku.wsgi    —log-file -
 ```
+
+Then you have to chnage the `ALLOWED_HOSTS` value.
+
+```python
+    ALLOWED_HOSTS = ['*']
+```
+
+You have to log in to publish the app using command prompts. Then you have to run `heroku create` to create the app in Heroku. Then you have to run `heroku git:remote -a HEROKU_PROJECT_NAME`this command to add your project in the Heroku.
+
+```python
+    heroku git:remote -a thawing-wave-03752
+```
+
+Then you have to configer heroku using this command
+
+```python
+    heroku config:set DISABLE_COLLECSTATIC=1
+```
+
+Then you have to push the project on the heruko server.
+
+```python
+    git push heroku master
+```
