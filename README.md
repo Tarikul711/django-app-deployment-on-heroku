@@ -4,9 +4,9 @@ In this project, I am trying to deploy a simple Django project on the live Herok
 
 ### Heroku installation commend on mac
 
-    ```python
-        brew install heroku/brew/heroku
-    ```
+```python
+    brew install heroku/brew/heroku
+```
 
 Then please check, Is Heroku properly installed on your pc. For hacking please run this commends.
 
@@ -69,4 +69,10 @@ Then you have to push the project on the heruko server.
 
 ```python
     git push heroku master
+```
+
+Finally you have tp add this line to publish the project on Heroku
+
+```python
+    heroku ps:scale web=1
 ```
